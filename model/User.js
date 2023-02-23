@@ -14,5 +14,6 @@ const UserSchema = new Schema({
     externalLinks: [{ type: String, trim: true }]
 });
 
-const User = mongoose.Model('User', UserSchema);
+const User = mongoose.model('User', UserSchema);
+
 module.exports = User;

@@ -1,0 +1,2 @@
+GET http://localhost:3000/Users/vbvnyk
+Content-Type: application/json
