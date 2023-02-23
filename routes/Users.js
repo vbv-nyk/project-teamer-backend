@@ -12,14 +12,13 @@ userRouter.get("/:username", async (req, res) => {
 userRouter.post("/:username", async (req, res) => {
     //Create a new user
     const { username, firstName, lastName, password, email } = req.body;
-
-    const user = await User.create({ username, firstName, lastName, password, email });
+    const hashedPassword = bcrypt.hashSync(password, 8);
+    const user = await User.create({ username, firstName, lastName, password: hashedPassword, email });
     return user;
 });
 
 userRouter.delete("/:username", (req, res) => {
     //Remove a user from the database
-
 });
 
 userRouter.put("/:username", (req, res) => {
