@@ -1,3 +1,4 @@
+const { urlencoded } = require("express");
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
@@ -8,6 +9,8 @@ const app = express();
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGODBURL);
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use("/Projects", projectsRouter);
 app.use("/Users", userRouter);
 
