@@ -10,7 +10,7 @@ const ProjectSchema = new Schema({
         twitter: { type: String, trim: true },
         website: { type: String, trim: true },
         discord: { type: String, trim: true },
-        telegram: { type: String, trim: true }
+        telegram: { type: String, trim: true },
     }
 });
 
