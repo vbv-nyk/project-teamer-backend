@@ -12,3 +12,12 @@ Content-Type: application/json
     "password": "abcd1234",
     "email": "vbv.nyk.2003@gmail.com"
 }
+
+###
+POST http://localhost:3000/Auth/Login/
+Content-Type: application/json
+
+{
+    "username": "vbvnyk",
+    "password": "abcd1234"
+}
